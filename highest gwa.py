@@ -4,7 +4,7 @@
 # Open the input file.
 with open('students.txt', 'r') as f:
     # Set up variables to determine which student has the highest GWA.
-    highest_gwa = 1
+    highest_gwa = 0
     student_name = ''
     # Read the file line by line.
     for line in f:
@@ -18,7 +18,7 @@ with open('students.txt', 'r') as f:
         # Convert the GWA into a float.
         gwa = float(gwa)
         # Check if the student has a higher GWA than the current highest GWA
-        if gwa < highest_gwa:
+        if gwa > highest_gwa:
             # Update the highest GWA and the student's name with the highest GWA.
             highest_gwa = gwa
             student_name = name
