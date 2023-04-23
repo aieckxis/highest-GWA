@@ -9,7 +9,12 @@ with open('students.txt', 'r') as f:
     # Read the file line by line.
     for line in f:
         # Separate the student name from the GWA in the line.
-        name, gwa = line.strip().split(',')
+        name_gwa = line.strip().split(',')
+        # Check if the line has exactly 2 values
+        if len(name_gwa) !=2:
+            continue
+        # Extract the name and GWA from name_gwa
+        name, gwa = name_gwa
         # Convert the GWA into a float.
         gwa = float(gwa)
         # Check if the student has a higher GWA than the current highest GWA
